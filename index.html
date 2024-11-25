@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1 - M15 - SCAMPER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .time-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }     
+        .activity { margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1 - M15 - SCAMPER</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Saluda a los niños e introduce la misión.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 2 "Code Squad" y saluda a los niños mientras introduces el tema del día.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, genios del CODE SQUAD! Hoy tenemos una misión única: ayudaremos a Mariana, una artesana que crea piñatas tradicionales mexicanas, a encontrar formas nuevas de adaptarlas para que más personas puedan disfrutarlas. ¿Listos para aprender cómo hacerlo con la letra ‘A’ de Adaptar?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile_scamper')">
+        <div class="title">💃 Actividad 2: Baile de SCAMPER ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Guía a los niños con estos pasos para aplicar SCAMPER al baile.</div>
+    </div>
+    <div id="baile_scamper" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 3 "Canción SCAMPER" y guía a los niños y guíalos con estos pasos para aplicar SCAMPER al baile:
+                    <ul>
+                        <li><strong>Paso Inicial</strong> (Derecha, derecha, izquierda, izquierda): Comienza con un paso lateral básico, dos pasos a la derecha y dos a la izquierda.</li>
+                        <li><strong>Sustituir</strong> (Adelante, adelante, atrás, atrás): Cambias los pasos laterales por dos pasos adelante y dos atrás.</li>
+                        <li><strong>Combinar</strong> (Derecha adelante, izquierda atrás): Combinas los movimientos alternando un paso adelante con la derecha y uno atrás con la izquierda.</li>
+                        <li><strong>Adaptar</strong> (Pasos pequeños): Sigues con los pasos combinados, pero ahora los haces pequeños, casi como saltitos.</li>
+                        <li><strong>Proponer</strong> (Movimiento libre con las manos): Mantienes los pasos pequeños, pero ahora los niños pueden añadir movimientos libres con las manos, como quieran.</li>
+                        <li><strong>Eliminar</strong> (Solo pasos pequeños): Eliminas los movimientos de manos y vuelves a hacer solo los pasos pequeños hacia adelante y atrás.</li>
+                        <li><strong>Reorganizar</strong> (Izquierda adelante, derecha atrás): Inviertes la combinación, comenzando con izquierda adelante y derecha atrás.</li>
+                    </ul>
+                </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Síganme para que aprendamos a bailar al estilo SCAMPER. No se preocupen si la primera vez no pueden seguir todo lo que dice la canción, para eso es esta canción, para irnos ejercitando y que cada día sea más fácil.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento_problema')">
+        <div class="title">🛠️ Actividad 3: Planteamiento del Problema ⏰ Tiempo: 1.5 minutos</div>
+        <div class="subtitle">Introduce el video de las artesanías con las que van a trabajar y explica el reto.</div>
+    </div>
+    <div id="planteamiento_problema" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 4 "Desafío de Innovación" e introduce la historia de Mariana y su desafío de adaptar las piñatas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy tenemos una misión muy especial: ayudaremos a Mariana, una artesana que hace piñatas tradicionales mexicanas, a encontrar nuevas maneras de adaptarlas para que más personas puedan disfrutarlas. ¿Listos para conocer su historia?</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 5, dale PLAY > al video y al terminar y plantea preguntas para que los niños comprendan el reto de Mariana.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Muy bien, genios. Antes de empezar, repasemos algunas cosas importantes. <br>
+¿En qué estado creen que se originaron las piñatas mexicanas? (Esperar respuestas). <br>
+¡Así es, tienen raíces en varias regiones! ¿Y de qué material suelen estar hechas las piñatas? (Esperar respuestas). <br>
+¡Correcto, con papel y cartón! Ahora, ¿cómo podríamos adaptar una piñata para que se abra sin usar un palo?  <br>
+¿O qué otras formas de interacción se les ocurren para que más personas puedan jugar con ellas?</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('introduccion_scamper')">
+        <div class="title">🧠 Actividad 4: Introducción a la metodología SCAMPER ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Explica cómo hacer preguntas de innovación con "Sustituir".</div>
+    </div>
+    <div id="introduccion_scamper" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 6 "A de Adaptar" y presenta la idea de adaptar las piñatas tradicionales.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, hoy aprenderemos una herramienta especial llamada Adaptar. Adaptar significa cambiar algo para que funcione de una manera nueva o en un lugar diferente. Por ejemplo, ¿qué tal si cambiamos la manera en que interactuamos con una piñata? ¿Cómo podríamos hacer que se abra sin un palo? ¡Vamos a descubrirlo juntos con la letra ‘A’ de SCAMPER!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('metodologia_qtf')">
+        <div class="title">❓ Actividad 5: Metodología QTF ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Presenta el estímulo para hacer preguntas utilizando SCAMPER.</div>
+    </div>
+    <div id="metodologia_qtf" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 7 "Paso 1 Metodología QTF" y presenta el estímulo para hacer preguntas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Recuerdan de qué materiales están hechas las piñatas tradicionales? ¡Exacto, de papel y cartón! Hoy vamos a pensar en cómo podríamos adaptarlas para que más personas puedan disfrutarlas de formas diferentes. Usaremos nuestra fórmula mágica para hacer preguntas y explorar nuevas ideas.</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la Diapositiva 8 "Fórmula Preguntas" y presenta la fórmula de Adaptar para guiar a los niños en la exploración. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> La fórmula de hoy es: ‘¿Cómo podríamos adaptar [parte de la piñata] para que funcione de otra manera?’ Por ejemplo, ¿cómo podríamos adaptar el interior de la piñata para que suelte dulces al presionarla? ¡Dejen volar su imaginación y vamos a descubrirlo!</td>
+            </tr>
+<!-- Paso 3 -->
+<tr>
+    <td><strong>PASO 3 (3 minutos):</strong> Reproduce la Diapositiva 9 "Formulación de Preguntas" y guía a los niños en la creación de preguntas iniciales sobre adaptación. Anota sus ideas en el pizarrón.</td>
+    <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, pensemos en formas de adaptar las piñatas. ¿Qué tal si en lugar de golpearlas, usamos listones para abrirlas? ¿O si al tocarlas se abrieran solas? ¡Vamos a escribir todas las ideas en el pizarrón para inspirarnos!</td>
+</tr>
+
+            <!-- Paso 4 -->
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Reproduce la Diapositiva 10 "Mejorar Preguntas" y explica cómo pueden hacer sus preguntas más específicas. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Hicieron preguntas geniales, pero ahora vamos a mejorarlas. Por ejemplo, en lugar de preguntar ‘¿Cómo adaptamos la piñata para que no use palo?’, podríamos decir: ‘¿Cómo podríamos usar una cuerda que, al tirar de ella, suelte los dulces?’ ¡Hagamos nuestras preguntas más detalladas y claras!</td>
+            </tr>
+            <!-- Paso 5 -->
+            <tr>
+                <td><strong>PASO 5 (3 minutos):</strong> Reproduce la Diapositiva 11 "Ejemplo Pregunta Específica" y facilita el proceso para que los niños mejoren sus preguntas. Anota las nuevas preguntas en el pizarrón. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Revisemos esta pregunta: ‘¿Cómo adaptamos el exterior de la piñata para que sea más interactivo?’ ¿Podemos hacerla más específica? ¿Qué tal si preguntamos: ‘¿Cómo adaptamos el exterior para que al tocarlo active un mecanismo que libere dulces?’ ¡Hagamos preguntas que nos lleven a ideas únicas!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('prototipado_esferas')">
+        <div class="title">🖍️ Actividad 6: Prototipado en Papel de Alebrijes ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Aplica las preguntas formuladas en el diseño de la esfera.</div>
+    </div>
+    <div id="prototipado_esferas" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 12 "Innovando Piñatas" y explica que aplicaremos las preguntas para crear un nuevo diseño de Piñata.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Genios del CODE SQUAD, ahora vamos a poner en práctica las preguntas que hicimos para diseñar una nueva versión de nuestra piñata y vamos a dibujarlo. ¡Usen toda su creatividad y combinen las ideas que crearon!</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la Diapositiva 13 "Entregar Materiales" y distribuye papel, colores y materiales de diseño.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Aquí tienen sus materiales, genios. Con estos, vamos a crear nuestras propias piñatas adaptadas combinando formas, mecanismos y nuevas interacciones. ¡Manos a la obra!</td>
+            </tr>
+            <!-- Paso 3 -->
+            <tr>
+                <td><strong>PASO 3 (5-10 minutos):</strong> Reproduce la Diapositiva 14 "Diseñar Piñata" y guía a los niños en el diseño paso a paso, usando las ideas de adaptación que formularon. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos a empezar con la primera pregunta que propusieron: ¿cómo podemos hacer que la piñata se abra sin usar un palo? Dibujen su idea y luego pasemos a la siguiente parte. ¡Recuerden, cada diseño puede ser único y especial! </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('presentacion_tecnologia')">
+        <div class="title">💡 Actividad 7: Presentación de Tecnología ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Presenta la adición de tecnología al reto.</div>
+    </div>
+    <div id="presentacion_tecnologia" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 15 "Presentación de Tecnología" y explica cómo los sensores de presión o movimiento pueden ser integrados en las piñatas para adaptarlas. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Ahora que tenemos nuestras ideas de adaptación, vamos a ver cómo una tecnología especial puede hacer nuestras piñatas aún más emocionantes. Hoy veremos cómo usar sensores de presión o movimiento. ¿Se imaginan que una piñata se abra al tocarla o al acercarse a ella? ¡Vamos a descubrirlo juntos!</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Reproduce la Diapositiva 16 "Video de Sensores de Presión o Movimiento" y al final facilita preguntas para verificar la comprensión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿No es sorprendente, genios? Ahora que vimos cómo funcionan los sensores, repasemos. ¿Qué hace un sensor de presión? (Esperar respuestas). ¡Correcto, detecta cuando algo lo toca o lo empuja! ¿Y el sensor de movimiento? ¡Exacto, percibe cuando algo se mueve cerca de él!</td>
+            </tr>
+            <!-- Paso 3 -->
+            <tr>
+                <td><strong>PASO 3 (1 minuto):</strong> Reproduce la Diapositiva 17 "Ejemplo de Piñatas Adaptadas" y muestra ejemplos de piñatas que podrían usar sensores.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Miren estas ideas. ¿Ven cómo las luces y los mecanismos de estas piñatas se activan al tocarlas o moverlas? ¿Se imaginan aplicar algo así en sus diseños?</td>
+            </tr>
+            <!-- Paso 4 -->
+            <tr>
+                <td><strong>PASO 4 (5-8 minutos):</strong> Reproduce la Diapositiva 18 "Integración de Tecnología" y guía a los niños para pensar cómo incorporar sensores en sus propios diseños de piñatas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, genios, imaginen cómo sus piñatas podrían usar esta tecnología. ¿Dónde colocarían un sensor para que libere dulces al presionarlo o qué movimiento tendrían que hacer para que se abriera la piñata? ¿Podríamos hacer un juego con puntos para que se abriera la piñata? ¡Dejen volar su imaginación!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('presentacion_esferas')">
+        <div class="title">🎨 Actividad 8: Presentación de Alebrijes ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Organiza la presentación de las esferas en grupos de 3.</div>
+    </div>
+    <div id="presentacion_esferas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (3 minutos):</strong> Reproduce la Diapositiva 19 "Presentación de Diseños" y organiza a los niños en grupos de 3 para que presenten sus ideas al equipo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡CODE SQUAD, es momento de compartir sus increíbles ideas! Vamos a organizarnos en grupos de tres, y cada uno presentará su diseño de piñata adaptada. Expliquen cómo aplicaron las ideas de adaptación y cómo podrían usar sensores para hacer sus piñatas únicas. ¡Escuchemos todas sus ideas creativas!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 9 -->
+<div id="activity-9" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_historia')">
+        <div class="title">🏁 Actividad 9: Conclusión de la Historia y Reflexión ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Felicita al CODE SQUAD por su trabajo.</div>
+    </div>
+    <div id="conclusion_historia" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 20 "Conclusión y Cierre" y felicita a los niños por su creatividad y trabajo en equipo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios, hicieron un trabajo espectacular! Mariana está impresionada con todas las ideas que tuvieron para adaptar las piñatas tradicionales. Gracias a ustedes, más personas podrán disfrutar de esta hermosa tradición de maneras nuevas e inclusivas. ¡Sigamos usando nuestra creatividad en las próximas misiones del CODE SQUAD!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+  
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            // Filtrar pasos con tiempo 0 según el tiempo seleccionado
+            var activities = document.querySelectorAll('.activity');
+            activities.forEach(function(activity) {
+                var steps = activity.querySelectorAll('tr');
+                steps.forEach(function(step) {
+                    var stepTime = parseInt(step.getAttribute('data-time-' + time), 10);
+                    if (stepTime === 0) {
+                        step.style.display = 'none';
+                    } else {
+                        step.style.display = 'table-row';
+                    }
+                });
+            });
+        }
+
+        // Inicializar el contenido según las selecciones por defecto
+        updateContent();
+    </script>
+</body>
+</html>
